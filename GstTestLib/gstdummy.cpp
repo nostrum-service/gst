@@ -2,7 +2,7 @@
 /**
  * SECTION:element-dummy
  *
- * FIXME:Describe dummy here.
+ * Тестовый плагин для GStreamer 1.0. Ничего не делает. Перекладывает буфер из sink в src без изменений
  *
  * <refsect2>
  * <title>Example launch line</title>
