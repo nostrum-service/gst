@@ -2,7 +2,7 @@
 /**
  * SECTION:element-dummy
  *
- * Тестовый плагин для GStreamer 1.0. Ничего не делает. Перекладывает буфер из sink в src без изменений
+ * Test plugin for GStreamer 1.0. Does nothing. Transfer input buffer from sink pad to src without any changres. Demonstrate purpose only
  *
  * <refsect2>
  * <title>Example launch line</title>
