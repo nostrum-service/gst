@@ -29,3 +29,6 @@ _ReSharper*/
 [Tt]est[Rr]esult*
 
 GstTestLib.opensdf
+GstTestLib.sdf
+ipch/gsttestlib-b95fa0c0/gsttestlib-e8d2b0f1.ipch
+GstTestLib/GstTestLib.vcxproj.filters

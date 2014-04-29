@@ -7,7 +7,7 @@
  * <refsect2>
  * <title>Example launch line</title>
  * |[
- * gst-launch -v -m fakesrc ! dummy ! fakesink silent=TRUE
+ * gst-launch-1.0 videotestsrc ! dummy ! autovideosink -v
  * ]|
  * </refsect2>
  */
@@ -195,51 +195,3 @@ gst_dummy_chain (GstPad * pad, GstObject * parent, GstBuffer * buf)
   /* just push out the incoming buffer without touching it */
   return gst_pad_push (filter->srcpad, buf);
 }
-
-
-/* entry point to initialize the plug-in
- * initialize the plug-in itself
- * register the element factories and other features
- */
-static gboolean
-dummy_init (GstPlugin * dummy)
-{
-  /* debug category for fltering log messages
-   *
-   * exchange the string 'Template dummy' with your description
-   */
-  GST_DEBUG_CATEGORY_INIT (gst_dummy_debug, "dummy",
-      0, "Template dummy");
-
-  return gst_element_register (dummy, "dummy", GST_RANK_NONE,
-      GST_TYPE_DUMMY);
-}
-
-/* PACKAGE: this is usually set by autotools depending on some _INIT macro
- * in configure.ac and then written into and defined in config.h, but we can
- * just set it ourselves here in case someone doesn't use autotools to
- * compile this code. GST_PLUGIN_DEFINE needs PACKAGE to be defined.
- */
-#ifndef PACKAGE
-#define PACKAGE "gsttdummy"
-#endif
-
-#ifndef VERSION
-#define VERSION "1.0.0.0"
-#endif
-
-/* gstreamer looks for this structure to register dummys
- *
- * exchange the string 'Template dummy' with your dummy description
- */
-GST_PLUGIN_DEFINE (
-    GST_VERSION_MAJOR,
-    GST_VERSION_MINOR,
-    dummy,
-    "Template dummy",
-    dummy_init,
-    VERSION,
-    "LGPL",
-    "GStreamer",
-    "http://gstreamer.net/"
-)

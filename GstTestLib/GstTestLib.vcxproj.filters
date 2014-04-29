@@ -18,9 +18,18 @@
     <ClInclude Include="gstdummy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="gstpainter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="gstdummy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gstpainter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GstTestLib.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
